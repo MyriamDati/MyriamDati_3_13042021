@@ -1,0 +1,9 @@
+.m__header{
+  width: 100%;
+  background-color: white;
+
+  &__logo{
+    width: 50%;
+    @include margin;
+  }
+}
