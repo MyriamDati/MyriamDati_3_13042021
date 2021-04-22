@@ -1,9 +1,193 @@
-.m__header{
+.localisation{
+  display: flex;
   width: 100%;
-  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  color: $black;
+  background-color: $grey;
+  box-shadow: inset 0px 6px 10px -6px #C1C1C1;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
-  &__logo{
-    width: 50%;
+  &__city{
+    border: none;
+    font-size: 1em;
+    padding-left: 10px;
+    cursor: text;
+    background-color: $grey;
+    color: $black;
+    font-family: $text-font;
+  }
+
+  i{
+    margin-left: 40px;
+  }
+}
+
+.presentation{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $lightgrey;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  h1{
+    display: flex;
+    width: 70%;
     @include margin;
+    color: $black;
+    font-family: $text-font;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
+
+  p{
+    display: flex;
+    width: 90%;
+    @include margin;
+    color: $black;
+    font-family: $text-font;
+    font-weight: 200;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  button{
+    width: 60%;
+    display: flex;
+    @include margin;
+    justify-content: center;
+    background: $gradient;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 20px;
+    color: $white;
+    font-family: $text-font;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+.fonctionnement{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  @include margin;
+  color: $darkgrey;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: $text-font;
+
+  &__title{
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+  }
+
+  &__contenu{
+    display: flex;
+    width: 95%;
+    font-weight: 500;
+    @include margin;
+    align-items: center;
+    background-color: $lightgrey;
+    margin-bottom: 20px;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: $shadow;
+  }
+
+  .count{
+    display: flex;
+    background-color: $primary;
+    margin-left: -40px;
+    border-radius: 50px;
+    padding: 6px 10px;
+    color: $white;
+    font-size: 0.8em;
+    margin-right: 20px;
+  }
+
+  i{
+    color: darken($grey,50%);
+    margin-right: 10px;
+  }
+}
+
+.restaurant{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $grey;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: $text-font;
+
+  &__title{
+    font-family: $text-font;
+    font-weight: 700;
+    color: $black;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+  }
+
+  &__box{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    @include margin;
+  }
+
+  &__list{
+    background-color: $white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    position: relative;
+
+  img{
+    width: 100%;
+    height: 28vh;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+    object-position: 50% 60%;
+    }
+  
+  .new{
+    width: fit-content;
+    background: $tertiary;
+    color: $darktertiary;
+    padding: 4px 9px;
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  h2{
+    font-weight: 700;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  p{
+    font-weight: 300;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+
+  .heart{
+    width: 30px;
+    display: flex;
+    margin-left: auto;
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+  }
   }
 }

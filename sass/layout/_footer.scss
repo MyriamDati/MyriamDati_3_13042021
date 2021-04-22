@@ -1,0 +1,27 @@
+.footer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $darkgrey;
+  color: $white;
+
+  &__title{
+    font-family: $logo-font;
+    padding-top: 15px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__contenu{
+    display: flex;
+    font-family: $text-font;
+    color:  $white;
+    font-weight: 400;
+    padding-left: 15px;
+  }
+
+  .iconfooter{
+    padding-right: 10px;
+    font-size: 12px;
+  }
+}

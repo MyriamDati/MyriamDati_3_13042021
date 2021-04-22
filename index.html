@@ -14,8 +14,8 @@
 
 <body>
   <!--Header-->
-  <header class="m__header">
-    <a href="#"><img class="m__header__logo" src="images/logo/ohmyfood.png" alt="logo"</a>
+  <header class="header">
+    <a href="#"><img class="header__logo" src="images/logo/ohmyfood.png" alt="logo"</a>
   </header>
 
   <!--Section localisation-->
@@ -29,7 +29,7 @@
   <!--Section présentation de l'entreprise-->
   <section class="presentation">
     <h1>Réservez le menu qui vous convient</h1>
-    <p>Découvrez des restaurants d'exception, séléctionnés par nos soins </p>
+    <p>Découvrez des restaurants d'exception, séléctionnés par nos soins. </p>
     <button href="#restaurants" class="p_button">Explorer nos restaurants
     </button>
   </section>
@@ -50,8 +50,9 @@
 
   <!--Section Restaurants-->
   <section id="restaurants" class="restaurant">
-    <h1 class="restaurant__title">Restaurants</h1>
-    <div class="restaurant__cartes">
+    <div class="restaurant__box">
+      <h1 class="restaurant__title">Restaurants</h1>
+      <div class="restaurant__cartes">
       <figure class="restaurant__list">
       <a href="lapalettedugout.html"><img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant La palette du goût"></a>
       <div class="new">Nouveau</div>
@@ -98,16 +99,24 @@
 						</svg>
       </div>
       </figure>
+      </div>
     </div>
   </section>
 
   <!--Footer-->
   <footer class="footer">
     <p class="footer__title">Ohmyfood</p>
-    <a class="footer__contenu" href="#"><p><i class="fas iconfooter fa-utensils"></i>Proposer un restaurant</p></a>
-    <a class="footer__contenu" href="#"><p><i class="fas iconfooter fa-hands-helping"></i>Devenir partenaire</p></a>
-    <a class="footer__contenu" href="#"><p>Mentions légales</p></a>
-    <a class="footer__contenu" target="_blank" href="mailto:contact@ohmyfood.com"><p>Contact</p></a>
+    <a class="footer__contenu" href="#"><i class="fas iconfooter fa-utensils"></i><p></p>Proposer un restaurant</p>
+    </a>
+    <a class="footer__contenu" href="#">
+      <i class="fas iconfooter fa-hands-helping"></i><p></p>Devenir partenaire</p>
+    </a>
+    <a class="footer__contenu" href="#">
+      <p>Mentions légales</p>
+    </a>
+    <a class="footer__contenu" target="_blank" href="mailto:contact@ohmyfood.com">
+      <p>Contact</p>
+    </a>
   </footer>
 </body>
 </html>
