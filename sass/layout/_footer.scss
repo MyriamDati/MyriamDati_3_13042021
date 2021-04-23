@@ -25,4 +25,19 @@
     font-size: 13px;
     margin-right: 20px;
   }
+
+  @media screen and (min-width:600px) {
+    &__title{
+    width: 100%;
+    display: flex;
+    @include margin;
+    justify-content: center;
+  }
+
+  &__contenu{
+    width: 100%;
+    @include margin;
+    justify-content: center;
+  }
+  }
 }

@@ -73,6 +73,20 @@
     font-weight: 500;
     cursor: pointer;
   }
+
+@media screen and (min-width:768px){
+  .p_button{
+    width: 300px;
+    padding: 20px 20px;
+    font-size: 1.2em;
+  }
+  h1{
+    font-size: 1.6em;
+  }
+  p{
+    font-size: 1.2em;
+  }
+}
 }
 
 .fonctionnement{
@@ -89,6 +103,7 @@
     font-weight: 600;
     font-size: 1.3em;
     margin-bottom: 20px;
+    color: $black;
   }
 
   &__contenu{
@@ -120,6 +135,29 @@
     margin-right: 10px;
   }
 }
+@media screen and (min-width:600px){
+  .fonctionnement{
+  width: 60%;
+  
+  &__title{
+    font-size: 1.6em;
+    width: 100%;
+    @include margin;
+    text-align: center;
+  }
+  }
+}
+@media screen and (min-width:768px){
+  .fonctionnement{
+  width: 50%;
+
+  &__contenu{
+    font-size: 1.2em;
+    color: $black;
+  }
+  }
+}
+
 
 .restaurant{
   display: flex;
@@ -192,4 +230,35 @@
     right: 15px;
   }
   }
+@media screen and (min-width:768px){
+  &__title{
+    width: 100%;
+    @include margin;
+    text-align: center;
+    font-size: 1.7em;
+  }
+  &__cartes{
+    width: 95%;
+    display: flex;
+    @include margin;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__list{
+    width: 40%;
+    margin-right: 20px;
+  }
 }
+@media screen and (min-width:1024px){
+  &__cartes{
+    width: 100%;
+    justify-content: start;
+    flex-wrap: nowrap;
+  }
+   &__list{
+    width: 30%;
+    margin-right: 10px;
+  }
+}
+}
+
