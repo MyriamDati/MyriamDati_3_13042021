@@ -202,7 +202,7 @@ td, th {
   width: 200px;
   display: flex;
   justify-content: center;
-  background: linear-gradient(70deg, #FF79DA, #9356DC);
+  background: linear-gradient(90deg, #FF79DA, #9356DC);
   border: none;
   border-radius: 20px;
   padding: 15px 20px;
@@ -259,7 +259,7 @@ td, th {
   display: flex;
   background-color: #9356DC;
   margin-left: -40px;
-  border-radius: 50px;
+  border-radius: 50%;
   padding: 6px 10px;
   color: white;
   font-size: 0.8em;
@@ -472,7 +472,7 @@ td, th {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(70deg, #FF79DA, #9356DC);
+  background: linear-gradient(90deg, #FF79DA, #9356DC);
   border: none;
   border-radius: 20px;
   padding: 15px 20px;
