@@ -26,17 +26,22 @@
 }
 
 .presentation{
-  display: flex;
-  flex-direction: column;
   width: 100%;
   background-color: $lightgrey;
   padding-top: 30px;
   padding-bottom: 30px;
 
-  h1{
+  &__box{
     display: flex;
-    width: 70%;
+    flex-direction: column;
+    width: 95%;
     @include margin;
+    text-align: center;
+    align-items: center;
+  }
+
+  h1{
+    width: 70%;
     color: $black;
     font-family: $text-font;
     font-weight: 700;
@@ -46,9 +51,7 @@
   }
 
   p{
-    display: flex;
     width: 90%;
-    @include margin;
     color: $black;
     font-family: $text-font;
     font-weight: 200;
@@ -57,10 +60,9 @@
     margin-bottom: 20px;
   }
 
-  button{
-    width: 60%;
+  .p_button{
+    width: 200px;
     display: flex;
-    @include margin;
     justify-content: center;
     background: $gradient;
     border: none;

@@ -26,24 +26,29 @@
   <!--Section menu-->
   <section class="menu">
     <h1 class="menu__title">A la française</h1>
-    <div class="heart"><i class="far fa-heart"></i></div>
+    <div class="heart">
+        <svg class="svg-icon" viewBox="0 0 20 20">
+							<path d="M9.719,17.073l-6.562-6.51c-0.27-0.268-0.504-0.567-0.696-0.888C1.385,7.89,1.67,5.613,3.155,4.14c0.864-0.856,2.012-1.329,3.233-1.329c1.924,0,3.115,1.12,3.612,1.752c0.499-0.634,1.689-1.752,3.612-1.752c1.221,0,2.369,0.472,3.233,1.329c1.484,1.473,1.771,3.75,0.693,5.537c-0.19,0.32-0.425,0.618-0.695,0.887l-6.562,6.51C10.125,17.229,9.875,17.229,9.719,17.073 M6.388,3.61C5.379,3.61,4.431,4,3.717,4.707C2.495,5.92,2.259,7.794,3.145,9.265c0.158,0.265,0.351,0.51,0.574,0.731L10,16.228l6.281-6.232c0.224-0.221,0.416-0.466,0.573-0.729c0.887-1.472,0.651-3.346-0.571-4.56C15.57,4,14.621,3.61,13.612,3.61c-1.43,0-2.639,0.786-3.268,1.863c-0.154,0.264-0.536,0.264-0.69,0C9.029,4.397,7.82,3.61,6.388,3.61"></path>
+				</svg>
+    </div>
+    <div class="menu__list">
     <article class="menu__contenu">
       <h2 class="menu__subtitle">Entrées</h2>
-      <figure class="menu__entree__list">
+      <figure class="menu__plat">
         <div class="plat">
           <h3>Tartare de poulpe acidulé</h3>
           <span><h4>Au zestes d'orange</h4>
           <p>25€</p></span>
         </div>
       </figure>
-      <figure class="menu__entree__list">
+      <figure class="menu__plat">
         <div class="plat">
           <h3>Velouté de légumes d'antan</h3>
           <span><h4>Carotte, panais, topinambour</h4>
           <p>35€</p></span>
         </div>
       </figure>
-      <figure class="menu__entree__list">
+      <figure class="menu__plat">
         <div class="plat">
           <h3>Soupe à l'oignon</h3>
           <span><h4>Revisitée</h4>
@@ -53,21 +58,21 @@
     </article>
     <article class="menu__contenu">
       <h2 class="menu__subtitle">Plats</h2>
-      <figure class="menu__plats__list">
+      <figure class="menu__plat">
         <div class="plat">
           <h3>Coquilles Saint-Jacques</h3>
           <span><h4>Accompagnées d'une purée de panais</h4>
           <p>40€</p></span>
         </div>
       </figure>
-      <figure class="menu__plats__list">
+      <figure class="menu__plat">
         <div class="plat">
           <h3>Magnet de canard</h3>
           <span><h4>Et parmentier de pommes de terres</h4>
           <p>35€</p></span>
         </div>
       </figure>
-      <figure class="menu__plats__list">
+      <figure class="menu__plat">
         <div class="plat">
           <h3>Pigeonneau d'Ille-et-Vilaine</h3>
           <span><h4>Sur son lit de gnocchis aux légumes</h4>
@@ -77,21 +82,21 @@
     </article>
     <article class="menu__contenu">
       <h2 class="menu__subtitle">Desserts</h2>
-      <figure class="menu__plats__desserts">
+      <figure class="menu__plat">
         <div class="plat">
           <h3>Pétales de violettes glacés</h3>
           <span><h4>Et purée de noisettes</h4>
           <p>18€</p></span>
         </div>
       </figure>
-      <figure class="menu__plats__desserts">
+      <figure class="menu__plat">
         <div class="plat">
           <h3>Fondant au chocolat</h3>
           <span><h4>Revisité</h4>
           <p>22€</p></span>
         </div>
       </figure>
-      <figure class="menu__plats__desserts">
+      <figure class="menu__plat">
         <div class="plat">
           <h3>Millefeuille croustillant</h3>
           <span><h4>Myrtilles et pâte d'amande</h4>
@@ -99,16 +104,21 @@
         </div>
       </figure>
     </article>
+    </div>
     <button href="#" class="button">Commander</button>
   </section>
 
     <!--Footer-->
   <footer class="footer">
     <p class="footer__title">Ohmyfood</p>
-    <a href="#"><p><i class="fas iconfooter fa-utensils"></i>Proposer un restaurant</p></a>
-    <a href="#"><p><i class="fas iconfooter fa-hands-helping"></i>Devenir partenaire</p></a>
-    <a href="#"><p>Mentions légales</p></a>
-    <a target="_blank" href="mailto:contact@ohmyfood.com"><p>Contact</p></a>
+    <a class="footer__contenu" href="#"><p><i class="fas iconfooter fa-utensils"></i>Proposer un restaurant</p>
+    </a>
+    <a class="footer__contenu" href="#"><p><i class="fas iconfooter fa-hands-helping"></i>Devenir partenaire</p>
+    </a>
+    <a class="footer__contenu" href="#"><p>Mentions légales</p>
+    </a>
+    <a class="footer__contenu" target="_blank" href="mailto:contact@ohmyfood.com"><p>Contact</p>
+    </a>
   </footer>
 </body>
 </html>

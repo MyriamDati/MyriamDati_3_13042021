@@ -55,14 +55,23 @@ td, th {
   background-color: white;
   width: 100%;
 }
-.header__logo {
-  width: 50%;
+.header__box {
+  width: 90%;
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
-  margin-bottom: 10px;
   justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
+.header__logo {
+  width: 150px;
+}
+.header__back {
+  color: black;
+  width: 10px;
+  position: relative;
+  left: -60px;
 }
 
 .footer {
@@ -71,23 +80,24 @@ td, th {
   width: 100%;
   background-color: #353535;
   color: white;
+  padding: 15px;
 }
 .footer__title {
   font-family: "Shrikhand", cursive;
-  padding-top: 15px;
-  padding-left: 15px;
   margin-bottom: 15px;
+  color: white;
 }
 .footer__contenu {
   display: flex;
   font-family: "Roboto", sans-serif;
   color: white;
   font-weight: 400;
-  padding-left: 15px;
+  align-items: center;
 }
 .footer .iconfooter {
-  padding-right: 10px;
-  font-size: 12px;
+  width: 5px;
+  font-size: 13px;
+  margin-right: 20px;
 }
 
 .localisation {
@@ -116,18 +126,22 @@ td, th {
 }
 
 .presentation {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   background-color: #f6f6f6;
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.presentation h1 {
+.presentation__box {
   display: flex;
-  width: 70%;
+  flex-direction: column;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  align-items: center;
+}
+.presentation h1 {
+  width: 70%;
   color: black;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -136,10 +150,7 @@ td, th {
   margin-bottom: 10px;
 }
 .presentation p {
-  display: flex;
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
   color: black;
   font-family: "Roboto", sans-serif;
   font-weight: 200;
@@ -147,11 +158,9 @@ td, th {
   font-size: 1em;
   margin-bottom: 20px;
 }
-.presentation button {
-  width: 60%;
+.presentation .p_button {
+  width: 200px;
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
   justify-content: center;
   background: linear-gradient(70deg, #FF79DA, #9356DC);
   border: none;
@@ -271,6 +280,102 @@ td, th {
   position: absolute;
   bottom: 20px;
   right: 15px;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #eaeaea;
+  border-radius: 20px 20px 0px 0px;
+  position: relative;
+  margin-top: -40px;
+  color: black;
+}
+.menu__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 25px;
+  padding-left: 15px;
+}
+.menu .heart {
+  width: 30px;
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  top: -35px;
+  right: 25px;
+}
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Roboto", sans-serif;
+}
+.menu__subtitle {
+  text-transform: uppercase;
+  font-weight: 200;
+  width: 40px;
+  border-bottom: 3px solid #99E2D0;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+.menu__contenu {
+  margin-bottom: 20px;
+}
+.menu__plat {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 5px 6px 1px #C1C1C1;
+}
+.menu__plat h3 {
+  font-size: 1.1em;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.menu__plat h4 {
+  font-size: 0.9em;
+  font-weight: 300;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu__plat p {
+  font-size: 0.9em;
+  font-weight: 500;
+  display: flex;
+  float: right;
+  margin-left: auto;
+}
+.menu__plat span {
+  display: flex;
+}
+.menu button {
+  width: 150px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(70deg, #FF79DA, #9356DC);
+  border: none;
+  border-radius: 20px;
+  padding: 15px 20px;
+  justify-content: center;
+  color: white;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0px 5px 6px 1px #C1C1C1;
 }
 
 /*# sourceMappingURL=style.css.map */

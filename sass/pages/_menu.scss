@@ -1,0 +1,103 @@
+.menu{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: $grey;
+  border-radius: 20px 20px 0px 0px;
+  position: relative;
+  margin-top: -40px;
+  color: $black;
+
+    &__title{
+      font-family: $logo-font;
+      font-size: 25px;
+      padding-left: 15px;
+    }
+    
+  .heart{
+    width: 30px;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    top: -35px;
+    right: 25px;
+  } 
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    @include margin;
+    font-family: $text-font;
+  }
+
+  &__subtitle{
+    text-transform: uppercase;
+    font-weight: 200;
+    width: 40px;
+    border-bottom: 3px solid $tertiary;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+
+  &__contenu{
+    margin-bottom: 20px;
+  }
+
+  &__plat{
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: $shadow;
+
+  h3{
+      font-size: 1.1em;
+      font-weight: 500;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+  
+  h4{
+    font-size: 0.9em;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  p{
+    font-size: 0.9em;
+    font-weight: 500;
+    display: flex;float: right;
+    margin-left: auto;
+  }
+
+  span{
+    display: flex;
+  }
+  }
+
+  button{
+    width: 150px;
+    display: flex;
+    @include margin;
+    background: $gradient;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 20px;
+    justify-content: center;
+    color: $white;
+    font-size: 1em;
+    font-family: $text-font;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: $shadow;
+  }
+}

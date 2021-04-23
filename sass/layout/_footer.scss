@@ -4,24 +4,25 @@
   width: 100%;
   background-color: $darkgrey;
   color: $white;
+  padding: 15px;
 
   &__title{
     font-family: $logo-font;
-    padding-top: 15px;
-    padding-left: 15px;
     margin-bottom: 15px;
+    color: $white;
   }
 
   &__contenu{
     display: flex;
     font-family: $text-font;
-    color:  $white;
+    color: $white;
     font-weight: 400;
-    padding-left: 15px;
+    align-items: center;
   }
 
   .iconfooter{
-    padding-right: 10px;
-    font-size: 12px;
+    width: 5px;
+    font-size: 13px;
+    margin-right: 20px;
   }
 }
