@@ -25,5 +25,14 @@
     position: relative;
     left: -60px;
   }
+
+@media screen and (min-width:900px){
+  &__logo{
+    width: 250px;
+  }
+  &__back{
+   font-size: 30px;
+  }
+}
 }
 

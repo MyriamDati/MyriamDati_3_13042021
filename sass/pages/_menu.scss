@@ -100,4 +100,45 @@
     cursor: pointer;
     box-shadow: $shadow;
   }
+
+@media screen and (min-width:900px){
+ &__list{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    @include margin;
+    justify-content: center;
+  }
+  &__plat{
+    width: 90%;
+  }
+}
+@media screen and (min-width:1024px){
+  &__title{
+      width: 100%;
+      display: flex;
+      @include margin;
+      justify-content: center;
+      font-size: 2.3em;
+      padding-left: 0px;
+      padding-bottom: 20px;
+    }
+  .heart{
+    width: 50px;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    top: -80px;
+    right: 50px;
+  } 
+  &__plat{
+    width: 100%;
+    @include margin;
+    justify-content: center;
+  }
+  &__contenu{
+    margin-right: 10px;
+    width: 40%;
+  }
+}
 }
