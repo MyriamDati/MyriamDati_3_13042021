@@ -54,6 +54,12 @@ td, th {
 .header {
   background-color: white;
   width: 100%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .header__box {
   width: 90%;
@@ -62,7 +68,6 @@ td, th {
   margin-right: auto;
   justify-content: center;
   align-items: center;
-  padding: 10px 0px;
 }
 .header__logo {
   width: 150px;
@@ -98,6 +103,21 @@ td, th {
   width: 5px;
   font-size: 13px;
   margin-right: 20px;
+}
+@media screen and (min-width: 600px) {
+  .footer__title {
+    width: 100%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+  .footer__contenu {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
 }
 
 .localisation {
@@ -171,6 +191,19 @@ td, th {
   font-weight: 500;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .presentation .p_button {
+    width: 300px;
+    padding: 20px 20px;
+    font-size: 1.2em;
+  }
+  .presentation h1 {
+    font-size: 1.6em;
+  }
+  .presentation p {
+    font-size: 1.2em;
+  }
+}
 
 .fonctionnement {
   display: flex;
@@ -187,6 +220,7 @@ td, th {
   font-weight: 600;
   font-size: 1.3em;
   margin-bottom: 20px;
+  color: black;
 }
 .fonctionnement__contenu {
   display: flex;
@@ -216,6 +250,27 @@ td, th {
   margin-right: 10px;
 }
 
+@media screen and (min-width: 600px) {
+  .fonctionnement {
+    width: 60%;
+  }
+  .fonctionnement__title {
+    font-size: 1.6em;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    width: 50%;
+  }
+  .fonctionnement__contenu {
+    font-size: 1.2em;
+    color: black;
+  }
+}
 .restaurant {
   display: flex;
   flex-direction: column;
@@ -280,6 +335,38 @@ td, th {
   position: absolute;
   bottom: 20px;
   right: 15px;
+}
+@media screen and (min-width: 768px) {
+  .restaurant__title {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 1.7em;
+  }
+  .restaurant__cartes {
+    width: 95%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .restaurant__list {
+    width: 40%;
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__cartes {
+    width: 100%;
+    justify-content: start;
+    flex-wrap: nowrap;
+  }
+  .restaurant__list {
+    width: 30%;
+    margin-right: 10px;
+  }
 }
 
 .menu {
