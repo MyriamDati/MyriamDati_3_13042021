@@ -66,6 +66,7 @@
     justify-content: center;
     background: $gradient;
     border: none;
+    box-shadow: $shadow;
     border-radius: 20px;
     padding: 15px 20px;
     color: white;
@@ -262,4 +263,3 @@
       }
   }
 }
-

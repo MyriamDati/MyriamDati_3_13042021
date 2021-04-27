@@ -1,8 +1,9 @@
 @import "utils/variables";
 @import "utils/mixins";
 @import "base/reset";
-@import "base/basic";
-@import "layout/header";
-@import "layout/footer";
+@import "base/base";
+@import "composants/loader";
+@import "pages/header";
 @import "pages/accueil";
 @import "pages/menu";
+@import "pages/footer";
