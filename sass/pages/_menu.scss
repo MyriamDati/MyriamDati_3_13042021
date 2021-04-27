@@ -8,13 +8,13 @@
   border-radius: 20px 20px 0px 0px;
   position: relative;
   margin-top: -40px;
-  color: $black;
+  color: black;
 
-    &__title{
-      font-family: $logo-font;
-      font-size: 25px;
-      padding-left: 15px;
-    }
+  &__title{
+    font-family: $logo-font;
+    font-size: 25px;
+    padding-left: 15px;
+  }
     
   .heart{
     width: 30px;
@@ -49,7 +49,7 @@
   &__plat{
     display: flex;
     flex-direction: column;
-    background-color: $white;
+    background-color: white;
     margin-bottom: 15px;
     border-radius: 10px;
     padding: 10px;
@@ -75,7 +75,8 @@
   p{
     font-size: 0.9em;
     font-weight: 500;
-    display: flex;float: right;
+    display: flex;
+    float: right;
     margin-left: auto;
   }
 
@@ -93,7 +94,7 @@
     border-radius: 20px;
     padding: 15px 20px;
     justify-content: center;
-    color: $white;
+    color: white;
     font-size: 1em;
     font-family: $text-font;
     font-weight: 400;
@@ -101,44 +102,44 @@
     box-shadow: $shadow;
   }
 
-@media screen and (min-width:900px){
- &__list{
-    display: flex;
-    flex-direction: row;
-    width: 95%;
-    @include margin;
-    justify-content: center;
-  }
-  &__plat{
-    width: 90%;
-  }
-}
-@media screen and (min-width:1024px){
-  &__title{
-      width: 100%;
+  @media screen and (min-width:900px){
+  &__list{
       display: flex;
+      flex-direction: row;
+      width: 95%;
       @include margin;
       justify-content: center;
-      font-size: 2.3em;
-      padding-left: 0px;
-      padding-bottom: 20px;
     }
-  .heart{
-    width: 50px;
-    display: flex;
-    position: relative;
-    margin-left: auto;
-    top: -80px;
-    right: 50px;
-  } 
-  &__plat{
-    width: 100%;
-    @include margin;
-    justify-content: center;
+    &__plat{
+      width: 90%;
+    }
   }
-  &__contenu{
-    margin-right: 10px;
-    width: 40%;
+  @media screen and (min-width:1024px){
+    &__title{
+        width: 100%;
+        display: flex;
+        @include margin;
+        justify-content: center;
+        font-size: 2.3em;
+        padding-left: 0px;
+        padding-bottom: 20px;
+    }
+    .heart{
+      width: 50px;
+      display: flex;
+      position: relative;
+      margin-left: auto;
+      top: -80px;
+      right: 50px;
+    } 
+    &__plat{
+      width: 100%;
+      @include margin;
+      justify-content: center;
+    }
+    &__contenu{
+      margin-right: 10px;
+      width: 40%;
+    }
   }
-}
 }

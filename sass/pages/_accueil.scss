@@ -4,7 +4,7 @@
   margin-right: auto;
   margin-left: auto;
   justify-content: center;
-  color: $black;
+  color: black;
   background-color: $grey;
   box-shadow: inset 0px 6px 10px -6px #C1C1C1;
   padding-top: 10px;
@@ -16,7 +16,7 @@
     padding-left: 10px;
     cursor: text;
     background-color: $grey;
-    color: $black;
+    color: black;
     font-family: $text-font;
   }
 
@@ -42,7 +42,7 @@
 
   h1{
     width: 70%;
-    color: $black;
+    color: black;
     font-family: $text-font;
     font-weight: 700;
     text-align: center;
@@ -52,7 +52,7 @@
 
   p{
     width: 90%;
-    color: $black;
+    color: black;
     font-family: $text-font;
     font-weight: 200;
     text-align: center;
@@ -68,7 +68,7 @@
     border: none;
     border-radius: 20px;
     padding: 15px 20px;
-    color: $white;
+    color: white;
     font-family: $text-font;
     font-weight: 500;
     cursor: pointer;
@@ -98,12 +98,18 @@
   padding-top: 30px;
   padding-bottom: 30px;
   font-family: $text-font;
+  @media screen and (min-width:600px){
+    width: 60%;
+  }
+  @media screen and (min-width:768px){
+    width: 50%;
+  }
 
   &__title{
     font-weight: 600;
     font-size: 1.3em;
     margin-bottom: 20px;
-    color: $black;
+    color: black;
   }
 
   &__contenu{
@@ -125,7 +131,7 @@
     margin-left: -40px;
     border-radius: 50%;
     padding: 6px 10px;
-    color: $white;
+    color: white;
     font-size: 0.8em;
     margin-right: 20px;
   }
@@ -134,30 +140,23 @@
     color: darken($grey,50%);
     margin-right: 10px;
   }
-}
-@media screen and (min-width:600px){
-  .fonctionnement{
-  width: 60%;
-  
-  &__title{
+
+  @media screen and (min-width:600px){
+    &__title{
     font-size: 1.6em;
     width: 100%;
     @include margin;
     text-align: center;
+    }
   }
+
+  @media screen and (min-width:768px){
+     &__contenu{
+        font-size: 1.2em;
+        color: black;
+      }
   }
 }
-@media screen and (min-width:768px){
-  .fonctionnement{
-  width: 50%;
-
-  &__contenu{
-    font-size: 1.2em;
-    color: $black;
-  }
-  }
-}
-
 
 .restaurant{
   display: flex;
@@ -171,7 +170,7 @@
   &__title{
     font-family: $text-font;
     font-weight: 700;
-    color: $black;
+    color: blue;
     font-size: 1.6em;
     margin-bottom: 20px;
   }
@@ -184,7 +183,7 @@
   }
 
   &__list{
-    background-color: $white;
+    background-color: white;
     border-radius: 15px;
     margin-bottom: 20px;
     position: relative;
@@ -195,7 +194,7 @@
     border-radius: 15px 15px 0px 0px;
     object-fit: cover;
     object-position: 50% 60%;
-    }
+  }
   
   .new{
     width: fit-content;
@@ -232,35 +231,35 @@
   }
 
 
-@media screen and (min-width:768px){
-  &__title{
-    width: 100%;
-    @include margin;
-    text-align: center;
-    font-size: 1.7em;
+  @media screen and (min-width:768px){
+    &__title{
+      width: 100%;
+      @include margin;
+      text-align: center;
+      font-size: 1.7em;
+    }
+    &__cartes{
+      width: 95%;
+      display: flex;
+      @include margin;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &__list{
+      width: 40%;
+      margin-right: 20px;
+    }
   }
-  &__cartes{
-    width: 95%;
-    display: flex;
-    @include margin;
-    justify-content: center;
-    flex-wrap: wrap;
+  @media screen and (min-width:1024px){
+      &__cartes{
+      width: 100%;
+      justify-content: start;
+      flex-wrap: nowrap;
+      }
+      &__list{
+      width: 30%;
+      margin-right: 10px;
+      }
   }
-  &__list{
-    width: 40%;
-    margin-right: 20px;
-  }
-}
-@media screen and (min-width:1024px){
-  &__cartes{
-    width: 100%;
-    justify-content: start;
-    flex-wrap: nowrap;
-  }
-   &__list{
-    width: 30%;
-    margin-right: 10px;
-  }
-}
 }
 

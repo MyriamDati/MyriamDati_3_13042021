@@ -3,19 +3,19 @@
   flex-direction: column;
   width: 100%;
   background-color: $darkgrey;
-  color: $white;
+  color: white;
   padding: 15px;
 
   &__title{
     font-family: $logo-font;
     margin-bottom: 15px;
-    color: $white;
+    color: white;
   }
 
   &__contenu{
     display: flex;
     font-family: $text-font;
-    color: $white;
+    color: white;
     font-weight: 400;
     align-items: center;
   }
@@ -32,13 +32,13 @@
     display: flex;
     @include margin;
     justify-content: center;
-  }
+    }
 
-  &__contenu{
+    &__contenu{
     width: 100%;
     @include margin;
     justify-content: center;
-  }
+    }
   }
   
   @media screen and (min-width:1024px){
