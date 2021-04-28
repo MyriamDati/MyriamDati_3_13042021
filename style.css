@@ -463,6 +463,19 @@ body {
   }
 }
 
+.restaurant__image {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__image img {
+    border-radius: 20%;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 .menu {
   width: 100%;
   display: flex;
@@ -474,6 +487,7 @@ body {
   position: relative;
   margin-top: -40px;
   color: black;
+  overflow: hidden;
 }
 .menu__title {
   font-family: "Shrikhand", cursive;
@@ -528,6 +542,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-family: "Roboto", sans-serif;
+  cursor: pointer;
 }
 .menu__subtitle {
   text-transform: uppercase;
@@ -548,19 +563,53 @@ body {
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0px 5px 6px 1px #C1C1C1;
-  animation: slideright 2s ease 0s 1 normal forwards;
+  animation: opacity 1s both;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-@keyframes slideright {
+@keyframes opacity {
   0% {
-    transform: translateY(250px);
     opacity: 0;
+    visibility: hidden;
   }
   100% {
-    transform: translateY(0);
     opacity: 1;
+    visibility: visible;
   }
 }
-.menu__plat h3 {
+.menu #option1 {
+  animation-delay: 0.5s;
+}
+.menu #option2 {
+  animation-delay: 0.6s;
+}
+.menu #option3 {
+  animation-delay: 0.7s;
+}
+.menu #option4 {
+  animation-delay: 0.8s;
+}
+.menu #option5 {
+  animation-delay: 0.9s;
+}
+.menu #option6 {
+  animation-delay: 1s;
+}
+.menu #option7 {
+  animation-delay: 1.1s;
+}
+.menu #option8 {
+  animation-delay: 1.2s;
+}
+.menu #option9 {
+  animation-delay: 1.3s;
+}
+.menu #option10 {
+  animation-delay: 1.4s;
+}
+.menu h3 {
   font-size: 1.1em;
   font-weight: 500;
   text-overflow: ellipsis;
@@ -568,33 +617,61 @@ body {
   overflow: hidden;
   margin-bottom: 10px;
 }
-.menu__plat h4 {
+.menu h4 {
   font-size: 0.9em;
   font-weight: 300;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.menu__plat p {
+.menu p {
   font-size: 0.9em;
   font-weight: 500;
   display: flex;
-  float: right;
-  margin-left: auto;
+  position: absolute;
+  right: 10px;
 }
-.menu__plat span {
+.menu span {
   display: flex;
 }
 .menu .check__box {
   display: flex;
+  height: 100%;
   position: absolute;
-  width: 20%;
-  height: 67px;
-  right: -90px;
-  bottom: 0px;
+  right: 0px;
+  top: 0px;
   background-color: #99E2D0;
-  border-radius: 0 15px 15px 0;
-  padding: 15px;
+  border-radius: 0 10px 10px 0;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.menu .check__box:active {
+  visibility: visible;
+  animation: apparition 0.5s ease both;
+}
+.menu .check__box i {
+  font-size: 30px;
+  color: white;
+}
+.menu .check__box i:active {
+  animation: rotation 0.8s ease both;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes apparition {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-500px);
+  }
 }
 .menu button {
   width: 150px;

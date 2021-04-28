@@ -1,3 +1,18 @@
+.restaurant__image{
+  width: 100%;
+
+  @media screen and (min-width:1024px){
+    img{
+      border-radius: 20%;
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+
 .menu{
   width: 100%;
   display: flex;
@@ -9,6 +24,7 @@
   position: relative;
   margin-top: -40px;
   color: black;
+  overflow: hidden;
 
   &__title{
     font-family: $logo-font;
@@ -66,6 +82,7 @@
     width: 95%;
     @include margin;
     font-family: $text-font;
+    cursor: pointer;
   }
 
   &__subtitle{
@@ -89,18 +106,52 @@
     border-radius: 10px;
     padding: 10px;
     box-shadow: $shadow;
-    animation: slideright 2s ease 0s 1 normal forwards;
-    
-    @keyframes slideright {
-      0% {
-       transform: translateY(250px);
-       opacity: 0;
+    animation: opacity 1s both;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+    @keyframes opacity{
+      0%{
+        opacity: 0;
+        visibility: hidden;
       }
-      100% {
-        transform: translateY(0);
+      100%{
         opacity: 1;
+        visibility: visible;
       }
-}
+    }
+  #option1{
+    animation-delay: 0.5s;
+  }
+  #option2{
+    animation-delay: 0.6s;
+  }
+  #option3{
+    animation-delay: 0.7s;
+  }
+  #option4{
+    animation-delay: 0.8s;
+  }
+  #option5{
+    animation-delay: 0.9s;
+  }
+  #option6{
+    animation-delay: 1s;
+  }
+  #option7{
+    animation-delay: 1.1s;
+  }
+  #option8{
+    animation-delay: 1.2s;
+  }
+  #option9{
+    animation-delay: 1.3s;
+  }
+  #option10{
+    animation-delay: 1.4s;
+  }
 
   h3{
       font-size: 1.1em;
@@ -123,25 +174,53 @@
     font-size: 0.9em;
     font-weight: 500;
     display: flex;
-    float: right;
-    margin-left: auto;
+    position: absolute;
+    right: 10px;
   }
 
   span{
     display: flex;
   }
-  }
-
+  
   .check__box{
     display: flex;
+    height: 100%;
     position: absolute;
-    width: 20%;
-    height: 67px;
-    right: -90px;
-    bottom: 0px;
+    right: 0px;
+    top: 0px;
     background-color: $tertiary;
-    border-radius: 0 15px 15px  0;
-    padding: 15px;
+    border-radius: 0 10px 10px  0;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    &:active{
+      visibility: visible;
+      animation: apparition 0.5s ease both;
+    }
+
+    & i{
+      font-size: 30px;
+      color: white;
+    }
+    & i:active{
+    animation: rotation 0.8s ease both;
+    }
+  }
+  @keyframes rotation{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes apparition{
+    from{
+      transform: translateX(0px);
+    }
+    to{
+      transform: translateX(-500px);
+    }
   }
   
 
