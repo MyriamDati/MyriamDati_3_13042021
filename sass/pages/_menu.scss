@@ -44,14 +44,14 @@
     fill: $grey;
 
     &:hover{
-    animation: remplissage 4s ease, scale 2s linear;
+    animation: remplissage 4s ease-in, scale 2s linear;
+    fill: $secondary;
     }
     }
   }   
   @keyframes remplissage{
     0%{
       fill: none;
-      stroke: black;
     }
     33%{
       fill:lighten($secondary, 20);
@@ -63,7 +63,6 @@
     }
     100%{
       fill: $gradient;
-      stroke: none;
       fill-opacity: 1;
     }
   }
@@ -153,13 +152,28 @@
     animation-delay: 1.4s;
   }
 
+  .plat__title{
+    width: 65%;
+  }
+
+  .plat__price__check{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    align-items: center;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
   h3{
-      font-size: 1.1em;
-      font-weight: 500;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
     }
   
   h4{
@@ -174,43 +188,47 @@
     font-size: 0.9em;
     font-weight: 500;
     display: flex;
-    position: absolute;
-    right: 10px;
+    padding-right: 10px;
+
   }
 
-  span{
-    display: flex;
-  }
-  
-  .check__box{
-    display: flex;
+  .icon{
+    background: $tertiary;
+    color: white;
+    padding: 16px 16px;
+    width: 100%;
     height: 100%;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    background-color: $tertiary;
-    border-radius: 0 10px 10px  0;
-    padding: 25px;
-    justify-content: center;
-    align-items: center;
+    border-radius: 0 10px 10px 0;
+    font-size: 30px;
+    position: relative;
+    right: -66px;
+    display: none;
 
-    & i{
-      font-size: 30px;
-      color: white;
+      &:active{
+        display: flex;
+        animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      }
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(66px);
     }
-    & i:active{
-    animation: rotation 500ms ease-in-out both;
+    100% {
+      transform: translateX(0);
     }
   }
-  @keyframes rotation{
-    0%{
-      transform: rotate(0deg);
-    }
-    100%{
-      transform: rotate(360deg);
-    }
+
+  i:hover{
+      animation: rotate 1s ease both;
   }
-  
+  @keyframes rotate{
+      0%{
+        transform: rotate(-90deg);
+      }
+      100%{
+        transform: rotate(0);
+      }
+  }
   
 
   button{

@@ -251,6 +251,8 @@
 
     &:hover{
     animation: remplissage 4s ease, scale 2s ease-in-out;
+    fill: $secondary;
+    stroke: $secondary;
 }
 }
 @keyframes remplissage{

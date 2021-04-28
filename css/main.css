@@ -402,6 +402,8 @@ body {
 }
 .restaurant__list .heart .heart-full:hover {
   animation: remplissage 4s ease, scale 2s ease-in-out;
+  fill: #FF79DA;
+  stroke: #FF79DA;
 }
 @keyframes remplissage {
   0% {
@@ -506,12 +508,12 @@ body {
   fill: #eaeaea;
 }
 .menu .heart .heart-full:hover {
-  animation: remplissage 4s ease, scale 2s linear;
+  animation: remplissage 4s ease-in, scale 2s linear;
+  fill: #FF79DA;
 }
 @keyframes remplissage {
   0% {
     fill: none;
-    stroke: black;
   }
   33% {
     fill: #ffdff6;
@@ -523,7 +525,6 @@ body {
   }
   100% {
     fill: linear-gradient(90deg, #FF79DA, #9356DC);
-    stroke: none;
     fill-opacity: 1;
   }
 }
@@ -609,13 +610,26 @@ body {
 .menu #option10 {
   animation-delay: 1.4s;
 }
+.menu .plat__title {
+  width: 65%;
+}
+.menu .plat__price__check {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  align-items: center;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 .menu h3 {
   font-size: 1.1em;
   font-weight: 500;
+  margin-bottom: 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin-bottom: 10px;
 }
 .menu h4 {
   font-size: 0.9em;
@@ -628,37 +642,41 @@ body {
   font-size: 0.9em;
   font-weight: 500;
   display: flex;
-  position: absolute;
-  right: 10px;
+  padding-right: 10px;
 }
-.menu span {
-  display: flex;
-}
-.menu .check__box {
-  display: flex;
-  height: 100%;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  background-color: #99E2D0;
-  border-radius: 0 10px 10px 0;
-  padding: 25px;
-  justify-content: center;
-  align-items: center;
-}
-.menu .check__box i {
-  font-size: 30px;
+.menu .icon {
+  background: #99E2D0;
   color: white;
+  padding: 16px 16px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  font-size: 30px;
+  position: relative;
+  right: -66px;
+  display: none;
 }
-.menu .check__box i:active {
-  animation: rotation 500ms ease-in-out both;
+.menu .icon:active {
+  display: flex;
+  animation: slide 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-@keyframes rotation {
+@keyframes slide {
   0% {
-    transform: rotate(0deg);
+    transform: translateX(66px);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translateX(0);
+  }
+}
+.menu i:hover {
+  animation: rotate 1s ease both;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
 .menu button {
