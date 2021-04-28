@@ -23,7 +23,42 @@
     margin-left: auto;
     top: -35px;
     right: 25px;
-  } 
+
+    .heart-full{
+    fill: $grey;
+
+    &:hover{
+    animation: remplissage 4s ease, scale 2s linear;
+    }
+    }
+  }   
+  @keyframes remplissage{
+    0%{
+      fill: none;
+      stroke: black;
+    }
+    33%{
+      fill:lighten($secondary, 20);
+      fill-opacity: 0.5;
+    }
+    50%{
+      fill: $secondary;
+      fill-opacity: 0.7;
+    }
+    100%{
+      fill: $gradient;
+      stroke: none;
+      fill-opacity: 1;
+    }
+  }
+  @keyframes scale{
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(1.5);
+    }
+  }
 
   &__list{
     display: flex;
@@ -54,6 +89,18 @@
     border-radius: 10px;
     padding: 10px;
     box-shadow: $shadow;
+    animation: slideright 2s ease 0s 1 normal forwards;
+    
+    @keyframes slideright {
+      0% {
+       transform: translateY(250px);
+       opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+}
 
   h3{
       font-size: 1.1em;
@@ -85,6 +132,19 @@
   }
   }
 
+  .check__box{
+    display: flex;
+    position: absolute;
+    width: 20%;
+    height: 67px;
+    right: -90px;
+    bottom: 0px;
+    background-color: $tertiary;
+    border-radius: 0 15px 15px  0;
+    padding: 15px;
+  }
+  
+
   button{
     width: 150px;
     display: flex;
@@ -100,6 +160,23 @@
     font-weight: 400;
     cursor: pointer;
     box-shadow: $shadow;
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 1s;
+
+    &:hover{
+    animation: shadow 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    opacity: 0.7;
+    }
+  }
+  @keyframes shadow{
+    0% {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      box-shadow: 0 3px 10px 0px rgb(0, 0, 0);
+    }
   }
 
   @media screen and (min-width:900px){
@@ -129,7 +206,7 @@
       display: flex;
       position: relative;
       margin-left: auto;
-      top: -80px;
+      top: -60px;
       right: 50px;
     } 
     &__plat{

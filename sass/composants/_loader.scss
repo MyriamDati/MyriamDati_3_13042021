@@ -14,13 +14,13 @@ body{
   position: fixed;
   background-color: white;
   z-index: 20;
-  animation: disparition 3s linear;
+  animation: disparition 2s linear;
   visibility: hidden;
 }
 @keyframes disparition{
   0%{
     visibility: visible;
-    opacity: 0.8;
+    opacity: 1;
   }
   50%{
     opacity: 0.8;
@@ -40,7 +40,7 @@ body{
   width: 200px;
   position: absolute;
   border-radius: 50%;
-  animation: spin 2s linear infinite;
+  animation: spin 3s linear infinite;
 }
 
 @keyframes spin{
@@ -49,6 +49,19 @@ body{
 }
 
 .lettre{
-  font-size: 1.2em;
-  letter-spacing: 10px;
+  font-family: $logo-font;
+  font-size: 0.7em;
+  letter-spacing: 12px;
+  animation: blur 3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@keyframes blur {
+  0% {
+    filter: blur(0);
+  }
+  33%{
+    filter: blur(2px) ;
+  }
+  100% {
+    filter: blur(12px) opacity(0%);
+  }
 }
