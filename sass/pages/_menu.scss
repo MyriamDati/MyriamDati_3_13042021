@@ -193,17 +193,13 @@
     padding: 25px;
     justify-content: center;
     align-items: center;
-    &:active{
-      visibility: visible;
-      animation: apparition 0.5s ease both;
-    }
 
     & i{
       font-size: 30px;
       color: white;
     }
     & i:active{
-    animation: rotation 0.8s ease both;
+    animation: rotation 500ms ease-in-out both;
     }
   }
   @keyframes rotation{
@@ -214,14 +210,7 @@
       transform: rotate(360deg);
     }
   }
-  @keyframes apparition{
-    from{
-      transform: translateX(0px);
-    }
-    to{
-      transform: translateX(-500px);
-    }
-  }
+  
   
 
   button{
