@@ -549,7 +549,7 @@ body {
   text-transform: uppercase;
   font-weight: 200;
   width: 40px;
-  border-bottom: 3px solid #99E2D0;
+  border-bottom: 4px solid #99E2D0;
   padding-bottom: 5px;
   margin-bottom: 15px;
 }
@@ -566,8 +566,6 @@ body {
   box-shadow: 0px 5px 6px 1px #C1C1C1;
   animation: opacity 1s both;
   position: relative;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
 }
 @keyframes opacity {
@@ -611,17 +609,10 @@ body {
   animation-delay: 1.4s;
 }
 .menu .plat__title {
-  width: 65%;
-}
-.menu .plat__price__check {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  position: absolute;
-  align-items: center;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  width: 80%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .menu h3 {
   font-size: 1.1em;
@@ -638,6 +629,21 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
+.menu .plat__price__check {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: absolute;
+  align-items: center;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateX(60px);
+}
+.menu .plat__price__check:hover {
+  transform: translateX(0px);
+  transition: transform 1.5s;
+}
 .menu p {
   font-size: 0.9em;
   font-weight: 500;
@@ -645,31 +651,20 @@ body {
   padding-right: 10px;
 }
 .menu .icon {
-  background: #99E2D0;
-  color: white;
-  padding: 16px 16px;
-  width: 100%;
+  display: flex;
+  width: 60%;
   height: 100%;
   border-radius: 0 10px 10px 0;
-  font-size: 30px;
   position: relative;
-  right: -66px;
-  display: none;
+  background: #99E2D0;
 }
-.menu .icon:active {
-  display: flex;
-  animation: slide 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-@keyframes slide {
-  0% {
-    transform: translateX(66px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.menu i {
+  padding: 16px 16px;
+  font-size: 30px;
+  color: white;
 }
 .menu i:hover {
-  animation: rotate 1s ease both;
+  animation: rotate 1s;
 }
 @keyframes rotate {
   0% {

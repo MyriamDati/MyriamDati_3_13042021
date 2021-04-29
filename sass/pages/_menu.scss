@@ -88,7 +88,7 @@
     text-transform: uppercase;
     font-weight: 200;
     width: 40px;
-    border-bottom: 3px solid $tertiary;
+    border-bottom: 4px solid $tertiary;
     padding-bottom: 5px;
     margin-bottom: 15px;
   }
@@ -107,8 +107,6 @@
     box-shadow: $shadow;
     animation: opacity 1s both;
     position: relative;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     overflow: hidden;
   }
     @keyframes opacity{
@@ -121,6 +119,7 @@
         visibility: visible;
       }
     }
+
   #option1{
     animation-delay: 0.5s;
   }
@@ -153,20 +152,11 @@
   }
 
   .plat__title{
-    width: 65%;
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
-
-  .plat__price__check{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    position: absolute;
-    align-items: center;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-
   h3{
     font-size: 1.1em;
     font-weight: 500;
@@ -181,54 +171,57 @@
     font-weight: 300;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
+    overflow:hidden;
   }
 
+  .plat__price__check{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    align-items: center;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateX(60px);
+    &:hover{
+      transform: translateX(0px);
+      transition: transform 1.5s;
+    }
+  }
+  
   p{
     font-size: 0.9em;
     font-weight: 500;
     display: flex;
     padding-right: 10px;
-
   }
 
   .icon{
-    background: $tertiary;
-    color: white;
-    padding: 16px 16px;
-    width: 100%;
+    display: flex;
+    width: 60%;
     height: 100%;
     border-radius: 0 10px 10px 0;
-    font-size: 30px;
     position: relative;
-    right: -66px;
-    display: none;
-
-      &:active{
-        display: flex;
-        animation: slide 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-      }
-  }
-  @keyframes slide {
-    0% {
-      transform: translateX(66px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+    background: $tertiary;
   }
 
-  i:hover{
-      animation: rotate 1s ease both;
+  i{
+    padding: 16px 16px;
+    font-size: 30px;
+    color: white;
+    &:hover{
+    animation: rotate 1s;
+    }
   }
-  @keyframes rotate{
-      0%{
-        transform: rotate(-90deg);
-      }
-      100%{
-        transform: rotate(0);
-      }
-  }
+    @keyframes rotate{
+        0%{
+          transform: rotate(-90deg);
+        }
+        100%{
+          transform: rotate(0);
+        }
+    }
   
 
   button{
@@ -256,53 +249,53 @@
     opacity: 0.7;
     }
   }
-  @keyframes shadow{
-    0% {
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    @keyframes shadow{
+      0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+      }
+      100% {
+        box-shadow: 0 3px 10px 0px rgb(0, 0, 0);
+      }
     }
-    100% {
-      box-shadow: 0 3px 10px 0px rgb(0, 0, 0);
-    }
-  }
 
-  @media screen and (min-width:900px){
-  &__list{
-      display: flex;
-      flex-direction: row;
-      width: 95%;
-      @include margin;
-      justify-content: center;
-    }
-    &__plat{
-      width: 90%;
-    }
-  }
-  @media screen and (min-width:1024px){
-    &__title{
-        width: 100%;
+    @media screen and (min-width:900px){
+    &__list{
         display: flex;
+        flex-direction: row;
+        width: 95%;
         @include margin;
         justify-content: center;
-        font-size: 2.3em;
-        padding-left: 0px;
-        padding-bottom: 20px;
+      }
+      &__plat{
+        width: 90%;
+      }
     }
-    .heart{
-      width: 50px;
-      display: flex;
-      position: relative;
-      margin-left: auto;
-      top: -60px;
-      right: 50px;
-    } 
-    &__plat{
-      width: 100%;
-      @include margin;
-      justify-content: center;
+    @media screen and (min-width:1024px){
+      &__title{
+          width: 100%;
+          display: flex;
+          @include margin;
+          justify-content: center;
+          font-size: 2.3em;
+          padding-left: 0px;
+          padding-bottom: 20px;
+      }
+      .heart{
+        width: 50px;
+        display: flex;
+        position: relative;
+        margin-left: auto;
+        top: -60px;
+        right: 50px;
+      } 
+      &__plat{
+        width: 100%;
+        @include margin;
+        justify-content: center;
+      }
+      &__contenu{
+        margin-right: 10px;
+        width: 40%;
+      }
     }
-    &__contenu{
-      margin-right: 10px;
-      width: 40%;
-    }
-  }
 }
