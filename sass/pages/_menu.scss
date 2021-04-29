@@ -242,11 +242,13 @@
     position: relative;
     z-index: 1;
     opacity: 1;
+    transform: scale(1);
     transition: opacity 1s;
 
     &:hover{
     animation: shadow 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     opacity: 0.7;
+    transform: scale(1.2);
     }
   }
     @keyframes shadow{
