@@ -91,7 +91,7 @@ body {
   }
 }
 .cutlery {
-  width: 200px;
+  width: 100px;
   animation: rotate 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
 }
 
@@ -110,6 +110,7 @@ body {
 .brand {
   font-size: 3em;
   font-weight: bolder;
+  font-family: "Shrikhand", cursive;
   letter-spacing: 5px;
   animation: color 1.5s linear infinite;
 }
@@ -338,6 +339,17 @@ body {
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .disposition_desktop {
+    display: flex;
+  }
+  .disposition_desktop .presentation {
+    background-color: white;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
 .restaurant {
   display: flex;
   flex-direction: column;

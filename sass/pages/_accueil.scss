@@ -178,6 +178,21 @@
   }
 }
 
+@media screen and (min-width:1024px){
+  .disposition_desktop{
+    display: flex;
+
+    .presentation{
+      background-color: white;
+      align-items: center;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}
+
+
+
 .restaurant{
   display: flex;
   flex-direction: column;
