@@ -236,8 +236,6 @@
     }
 
 
-/*animation de la check box au hover et au clique*/
-
 .plat{
   &:hover, &:focus, &:active{
     .plat__title{
@@ -261,7 +259,6 @@
   }
 }
 
-/*media queries*/
     @media screen and (min-width:500px){
       &__list{
         width: 60%;

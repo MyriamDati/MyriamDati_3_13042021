@@ -97,12 +97,10 @@ body {
 
 @keyframes rotate {
   0% {
-    -webkit-transform: rotateY(-360deg);
     transform: rotateY(-360deg);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
     opacity: 1;
   }
@@ -508,8 +506,6 @@ body {
   margin-top: -40px;
   color: black;
   overflow: hidden;
-  /*animation de la check box au hover et au clique*/
-  /*media queries*/
 }
 .menu__title {
   font-family: "Shrikhand", cursive;
