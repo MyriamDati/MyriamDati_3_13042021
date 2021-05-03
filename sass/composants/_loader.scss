@@ -15,7 +15,7 @@ body{
   position: fixed;
   background-color: white;
   z-index: 20;
-  animation: disparition 10s linear;
+  animation: disparition 3s linear;
   visibility: hidden;
 }
 @keyframes disparition{
@@ -37,7 +37,7 @@ body{
 
 .cutlery{
   width: 100px;
- animation: rotate 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
+ animation: rotate 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
 }  
 @keyframes rotate {
   0% {
@@ -54,23 +54,23 @@ body{
 
 
 .brand{
-  font-size: 3em;
-  font-weight: bolder;
+  font-size: 2em;
+  font-weight: 300;
   font-family: $logo-font;
   letter-spacing: 5px;
   animation: color 1.5s linear infinite;
 }
 @keyframes color{
   0%{
-    color: #9356dc;
-    text-shadow: 0 0 7px #9356dc;
+    color: white ;
+    text-shadow: 0 0 7px white;
   }
-  66%{
-    color: #99E2D0;
-    text-shadow: 0 0 7px #99E2D0;
+  50%{
+    color: $secondary;
+    text-shadow: 0 0 7px $secondary;
   }
   100%{
-    color: #9356dc;
-    text-shadow: 0 0 7px #9356dc;
+    color: white;
+    text-shadow: 0 0 7px white;
   }
 }
