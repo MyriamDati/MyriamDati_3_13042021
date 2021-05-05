@@ -11,3 +11,10 @@ $gradient: linear-gradient(90deg, #FF79DA, #9356DC);
 
 $text-font: 'Roboto', sans-serif;
 $logo-font: 'Shrikhand', cursive;
+
+.stop1{
+  stop-color: $secondary;
+}
+.stop2{
+  stop-color: $primary;
+}

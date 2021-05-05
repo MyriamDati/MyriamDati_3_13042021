@@ -1,3 +1,11 @@
+.stop1 {
+  stop-color: #FF79DA;
+}
+
+.stop2 {
+  stop-color: #9356DC;
+}
+
 /*RESET*/
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
@@ -404,48 +412,49 @@ body {
 .restaurant__list p {
   font-weight: 300;
   padding-left: 10px;
-  padding-bottom: 10px;
 }
 .restaurant__list .heart {
+  width: 30px;
   display: flex;
-  align-items: center;
-  transform: scale(1);
-  position: absolute;
+  position: relative;
+  margin-left: auto;
   right: 10px;
-  bottom: 15px;
-  justify-content: center;
+  bottom: 40px;
+  cursor: pointer;
 }
-.restaurant__list .heart:hover {
-  color: white;
-  transform: scale(1.3);
+.restaurant__list .heart .heart-full {
+  fill: white;
 }
-.restaurant__list .heart .empty-heart {
-  font-size: 32px;
-}
-.restaurant__list .heart .full-heart {
-  font-size: 30px;
-  position: absolute;
-  color: white;
-}
-.restaurant__list .heart .full-heart:hover {
-  animation: remplissage 2s linear forwards;
+.restaurant__list .heart .heart-full:hover {
+  animation: remplissage 4s ease, scale 2s linear;
+  animation: remplissage 4s ease-in, scale 2s linear;
+  fill: url(#Gradient);
 }
 @keyframes remplissage {
   0% {
-    color: #9356DC;
-    opacity: 0.1;
+    fill: none;
+    stroke: black;
+  }
+  33% {
+    fill: url(#Gradient);
+    fill-opacity: 0.5;
   }
   50% {
-    color: #9356DC;
-    opacity: 0.2;
-  }
-  70% {
-    color: #FF79DA;
-    opacity: 0.8;
+    fill: url(#Gradient);
+    fill-opacity: 0.7;
   }
   100% {
-    color: #FF79DA;
-    opacity: 1;
+    fill: url(#Gradient);
+    stroke: none;
+    fill-opacity: 1;
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
   }
 }
 @media screen and (min-width: 768px) {
@@ -513,46 +522,47 @@ body {
   margin-bottom: 40px;
 }
 .menu .heart {
-  width: 100%;
+  width: 30px;
   display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  top: 25px;
-  right: -40%;
-  transform: scale(1);
+  position: relative;
+  margin-left: auto;
+  top: -70px;
+  right: 25px;
+  cursor: pointer;
 }
-.menu .heart:hover {
-  color: #eaeaea;
-  transform: scale(1.3);
+.menu .heart .heart-full {
+  fill: #eaeaea;
 }
-.menu .heart .empty-heart {
-  font-size: 32px;
-}
-.menu .heart .full-heart {
-  font-size: 30px;
-  position: absolute;
-  color: #eaeaea;
-}
-.menu .heart .full-heart:hover {
-  animation: remplissage 2s linear forwards;
+.menu .heart .heart-full:hover {
+  animation: remplissage 4s ease, scale 2s linear;
+  animation: remplissage 4s ease-in, scale 2s linear;
+  fill: url(#Gradient);
 }
 @keyframes remplissage {
   0% {
-    color: #9356DC;
-    opacity: 0.1;
+    fill: none;
+    stroke: black;
+  }
+  33% {
+    fill: url(#Gradient);
+    fill-opacity: 0.5;
   }
   50% {
-    color: #9356DC;
-    opacity: 0.2;
-  }
-  70% {
-    color: #FF79DA;
-    opacity: 0.8;
+    fill: url(#Gradient);
+    fill-opacity: 0.7;
   }
   100% {
-    color: #FF79DA;
-    opacity: 1;
+    fill: url(#Gradient);
+    stroke: none;
+    fill-opacity: 1;
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
   }
 }
 .menu__list {
@@ -626,6 +636,23 @@ body {
 }
 .menu #option10 {
   animation-delay: 1.4s;
+}
+.menu .plat:hover .plat__title, .menu .plat:focus .plat__title, .menu .plat:active .plat__title {
+  width: 65%;
+}
+.menu .plat:hover .plat__title h3, .menu .plat:hover .plat__title h4, .menu .plat:focus .plat__title h3, .menu .plat:focus .plat__title h4, .menu .plat:active .plat__title h3, .menu .plat:active .plat__title h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu .plat:hover .plat__price__check, .menu .plat:focus .plat__price__check, .menu .plat:active .plat__price__check {
+  width: 35%;
+  transform: translateX(0px);
+  transition: all 1.5s ease-in;
+}
+.menu .plat:hover i, .menu .plat:focus i, .menu .plat:active i {
+  transform: rotate(360deg);
+  transition: all 1.5s ease-in;
 }
 .menu .plat__title {
   font-family: "Roboto", sans-serif;
@@ -703,23 +730,6 @@ body {
   100% {
     box-shadow: 0 3px 10px 0px black;
   }
-}
-.menu .plat:hover .plat__title, .menu .plat:focus .plat__title, .menu .plat:active .plat__title {
-  width: 65%;
-}
-.menu .plat:hover .plat__title h3, .menu .plat:hover .plat__title h4, .menu .plat:focus .plat__title h3, .menu .plat:focus .plat__title h4, .menu .plat:active .plat__title h3, .menu .plat:active .plat__title h4 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.menu .plat:hover .plat__price__check, .menu .plat:focus .plat__price__check, .menu .plat:active .plat__price__check {
-  width: 35%;
-  transform: translateX(0px);
-  transition: all 1.5s ease-in;
-}
-.menu .plat:hover i, .menu .plat:focus i, .menu .plat:active i {
-  transform: rotate(360deg);
-  transition: all 1.5s ease-in;
 }
 @media screen and (min-width: 500px) {
   .menu__list {

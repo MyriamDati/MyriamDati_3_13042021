@@ -32,47 +32,49 @@
     margin-bottom: 40px;
   }
   .heart{
-  width: 100%;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  top: 25px;
-  right: -40%;
-  transform: scale(1);
+    width: 30px;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    top: -70px;
+    right: 25px;
+    cursor: pointer;
+
+    .heart-full{
+    fill: $grey;
 
     &:hover{
-    color: $grey;
-    transform: scale(1.3);
+    animation: remplissage 4s ease, scale 2s linear;
+    animation: remplissage 4s ease-in, scale 2s linear;
+    fill: url(#Gradient);
     }
-    .empty-heart{
-    font-size: 32px;
     }
-    .full-heart{
-    font-size: 30px;
-    position: absolute;
-    color: $grey;
-    }
-    .full-heart:hover{
-    animation: remplissage 2s linear forwards;
-    }
-    @keyframes remplissage{
+  }   
+  @keyframes remplissage{
     0%{
-      color: $primary;
-      opacity: 0.1;
+      fill: none;
+      stroke: black;
+    }
+    33%{
+      fill: url(#Gradient);
+      fill-opacity: 0.5;
     }
     50%{
-      color: $primary;
-      opacity: 0.2;
-    }
-    70%{
-      color: $secondary;
-      opacity: 0.8;
+      fill: url(#Gradient);
+      fill-opacity: 0.7;
     }
     100%{
-      color: $secondary;
-      opacity: 1;
+      fill: url(#Gradient);
+      stroke: none;
+      fill-opacity: 1;
     }
+  }
+  @keyframes scale{
+    0%{
+      transform: scale(1);
+    }
+    100%{
+      transform: scale(1.5);
     }
   }
 
@@ -110,7 +112,7 @@
     position: relative;
     overflow: hidden;
   }
-    @keyframes opacity{
+  @keyframes opacity{
       0%{
         opacity: 0;
         visibility: hidden;
@@ -119,7 +121,7 @@
         opacity: 1;
         visibility: visible;
       }
-    }
+  }
 
   #option1{
     animation-delay: 0.5s;
@@ -150,6 +152,29 @@
   }
   #option10{
     animation-delay: 1.4s;
+  }
+
+  .plat{
+  &:hover, &:focus, &:active{
+    .plat__title{
+      width: 65%;
+      h3, h4{
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      }
+    }
+    .plat__price__check{
+      width: 35%;
+      transform: translateX(0px);
+      transition: all 1.5s ease-in;
+    }
+    i{
+      transform: rotate(360deg);
+      transition: all 1.5s ease-in;
+    }
+    
+  }
   }
 
   .plat__title{
@@ -236,42 +261,20 @@
         box-shadow: 0 3px 10px 0px rgb(0, 0, 0);
       }
   }
-
-
-  .plat{
-  &:hover, &:focus, &:active{
-    .plat__title{
-      width: 65%;
-      h3, h4{
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      }
-    }
-    .plat__price__check{
-      width: 35%;
-      transform: translateX(0px);
-      transition: all 1.5s ease-in;
-    }
-    i{
-      transform: rotate(360deg);
-      transition: all 1.5s ease-in;
-    }
     
-  }
-  }
-    
-    @media screen and (min-width:500px){
-      &__list{
+  @media screen and (min-width:500px){
+    &__list{
         width: 60%;
-      }
-      &__title{
+    }
+
+    &__title{
       font-family: $logo-font;
       font-size: 2em;
       padding-left: 10px;
       margin-bottom: 40px;
-      }
-      .heart{
+    }
+
+    .heart{
       width: 100%;
       display: flex;
       position: absolute;
@@ -279,11 +282,11 @@
       justify-content: center;
       top: 35px;
       right: -40%;
-      }
     }
+  }
 
-    @media screen and (min-width:900px){
-      &__title{
+  @media screen and (min-width:900px){
+    &__title{
         width: 100%;
         display: flex;
         @include margin;
@@ -291,29 +294,29 @@
         font-size: 2.3em;
         padding-left: 0px;
         padding-bottom: 20px;
-      }
-        &__list{
+    }
+    &__list{
           width: 60%;
-        }
-    } 
+    }
+  } 
 
-    @media screen and (min-width:1024px){
-      &__list{
+  @media screen and (min-width:1024px){
+    &__list{
       display: flex;
       flex-direction: row;
       width: 95%;
       @include margin;
       justify-content: center;
-      }
+    }
 
-      &__contenu{
+    &__contenu{
       margin-right: 10px;
       @include margin;
-      }
-
-      &__plat{
-      width: 30vw;
-      }
-
     }
+
+    &__plat{
+      width: 30vw;
+    }
+
+  }
 }
