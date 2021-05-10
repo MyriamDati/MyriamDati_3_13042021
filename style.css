@@ -644,7 +644,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
-.menu .plat:hover .plat__price__check, .menu .plat:focus .plat__price__check, .menu .plat:active .plat__price__check {
+.menu .plat:hover .plat__price_check, .menu .plat:focus .plat__price_check, .menu .plat:active .plat__price_check {
   width: 35%;
   transform: translateX(0px);
   transition: all 1.5s ease-in;
@@ -666,7 +666,7 @@ body {
   font-size: 0.9em;
   font-weight: 300;
 }
-.menu .plat__price__check {
+.menu .plat__price_check {
   display: flex;
   justify-content: flex-end;
   position: absolute;

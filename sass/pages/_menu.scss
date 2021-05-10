@@ -164,7 +164,7 @@
       white-space: nowrap;
       }
     }
-    .plat__price__check{
+    .plat__price_check{
       width: 35%;
       transform: translateX(0px);
       transition: all 1.5s ease-in;
@@ -192,7 +192,7 @@
     font-weight: 300;
   }
 
-  .plat__price__check{
+  .plat__price_check{
     display: flex;
     justify-content: flex-end;
     position: absolute;
